@@ -1,11 +1,10 @@
-# wingfyproject
-Financial Document Analyzer - Complete Debug & Migration Guide
+# Financial Document Analyzer - Complete Debug & Migration Guide
 
 A comprehensive financial document analysis system that processes corporate reports, financial statements, and investment documents using a robust AI orchestration pipeline (CrewAI).
 
 ---
 
-🐛 Bugs Found & How We Fixed Them
+## 🐛 Bugs Found & How We Fixed Them
 
 ### 1. The Pydantic `extra_forbidden` JSON Schema Crash
 **The Bug:** The application completely crashed when CrewAI reached out to Google Gemini with `1 validation error for FunctionDeclaration: parameters_json_schema`. This was caused by an architectural mismatch inside LangChain’s `@tool` adapter forcing `default` parameters into the Gemini tool-calling signature, which Google's stricter API outright rejects. The application was also relying on the natively deprecated `google-generativeai` package.

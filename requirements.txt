@@ -1,0 +1,18 @@
+# Core Dependencies
+fastapi
+uvicorn
+
+# CrewAI & Core AI Models
+crewai>=0.100.0
+google-genai
+
+# Document Processing
+pypdf
+
+# Utilities
+python-dotenv
+click
+pydantic>=2.11.0
+sqlalchemy
+pandas
+numpy
